@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">InternThread2</string>
+    <string name="app_name">InternThread3</string>
     <string name="S_ISS_STATION">ISS Station</string>
     <string name="S_ISS_POSITION">Position of the ISS Station</string>
     <string name="S_MOON">Moon</string>
@@ -8,4 +8,7 @@
     <string name="S_SUN_STAINS">Stains on the Sun</string>
     <string name="S_INFO">Info about Activity</string>
     <string name="S_RETURN">Return</string>
+    <string name="img_transfer">Image transfer in progress...</string>
+    <string name="transfer_error">Image Transfer Error!</string>
+    <string name="transfer_complete">transfer completed, img: %d x %d</string>
 </resources>

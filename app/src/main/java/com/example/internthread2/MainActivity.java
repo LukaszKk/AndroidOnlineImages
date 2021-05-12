@@ -1,7 +1,9 @@
 package com.example.internthread2;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -18,18 +20,63 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onISS(View view) {
-        Intent intent = new Intent(this, ISSActivity.class).putExtra("adress", adrIss);
-        startActivity(intent);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
     }
 
-    public void onMoon(View view) {
-        Intent intent = new Intent(this, MoonActivity.class).putExtra("adress", adrMoon);
-        startActivity(intent);
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.ID_ISS: {
+                Intent intent = new Intent(this, SubActivity.class)
+                        .putExtra("title", "ISS")
+                        .putExtra("adress", adrIss);
+                startActivity(intent);
+                break;
+            }
+            case R.id.ID_MOON: {
+                Intent intent = new Intent(this, SubActivity.class)
+                        .putExtra("title", "Moon")
+                        .putExtra("adress", adrMoon);
+                startActivity(intent);
+                break;
+            }
+            case R.id.ID_SUN: {
+                Intent intent = new Intent(this, SubActivity.class)
+                        .putExtra("title", "Sun")
+                        .putExtra("adress", adrSun);
+                startActivity(intent);
+                break;
+            }
+            default: {
+                finish();
+            }
+        }
+
+        return true;
     }
 
-    public void onSun(View view) {
-        Intent intent = new Intent(this, SunActivity.class).putExtra("adress", adrSun);
-        startActivity(intent);
-    }
+//    public void onISS(View view) {
+//        Intent intent = new Intent(this, SubActivity.class)
+//                .putExtra("title", "ISS")
+//                .putExtra("adress", adrIss);
+//        startActivity(intent);
+//    }
+//
+//    public void onMoon(View view) {
+//        Intent intent = new Intent(this, SubActivity.class)
+//                .putExtra("title", "Moon")
+//                .putExtra("adress", adrMoon);
+//        startActivity(intent);
+//    }
+//
+//    public void onSun(View view) {
+//        Intent intent = new Intent(this, SubActivity.class)
+//                .putExtra("title", "Sun")
+//                .putExtra("adress", adrSun);
+//        startActivity(intent);
+//    }
 }
