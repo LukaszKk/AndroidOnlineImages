@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnISS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/S_ISS_STATION"
+        android:onClick="onISS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMOON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/S_MOON"
+        android:onClick="onMoon"
+        app:layout_constraintStart_toStartOf="@+id/btnISS"
+        app:layout_constraintTop_toBottomOf="@+id/btnISS" />
+
+    <Button
+        android:id="@+id/btnSUN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/S_SUN"
+        android:onClick="onSun"
+        app:layout_constraintStart_toStartOf="@+id/btnMOON"
+        app:layout_constraintTop_toBottomOf="@+id/btnMOON" />
+
+    <TextView
+        android:id="@+id/txtISS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/S_ISS_POSITION"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnISS"
+        app:layout_constraintStart_toEndOf="@+id/btnISS" />
+
+    <TextView
+        android:id="@+id/txtMOON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/S_MOON_PHASES"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnMOON"
+        app:layout_constraintStart_toEndOf="@+id/btnMOON" />
+
+    <TextView
+        android:id="@+id/txtSUN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/S_SUN_STAINS"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSUN"
+        app:layout_constraintStart_toEndOf="@+id/btnSUN" />
+</androidx.constraintlayout.widget.ConstraintLayout>
